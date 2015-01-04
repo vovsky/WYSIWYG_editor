@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Atwix
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category    Atwix Mod
+ * @package     Atwix_Editor
+ * @author      Atwix Core Team
+ * @copyright   Copyright (c) 2014 Atwix (http://www.atwix.com)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Atwix_Editor>
+            <version>0.1.0</version>
+        </Atwix_Editor>
+    </modules>
+    <global>
+        <models>
+            <atwix_editor>
+                <class>Atwix_Editor_Model</class>
+                <resourceModel>atwix_editor_resource</resourceModel>
+            </atwix_editor>
+            <atwix_editor_resource>
+                <class>Atwix_Editor_Model_Resource</class>
+            </atwix_editor_resource>
+        </models>
+        <blocks>
+            <atwix_editor>
+                <class>Atwix_Editor_Block</class>
+            </atwix_editor>
+        </blocks>
+        <helpers>
+            <atwix_editor>
+                <class>Atwix_Editor_Helper</class>
+            </atwix_editor>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Atwix_Editor before="Mage_Adminhtml">Atwix_Editor_Adminhtml</Atwix_Editor>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <atwix_editor>
+                    <file>atwix_editor.xml</file>
+                </atwix_editor>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>
